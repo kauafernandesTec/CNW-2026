@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Uma jornada pela franquia The Legend of Zelda: a história, os personagens lendários, todos os jogos e curiosidades do reino de Hyrule." />
+  <title>A Lenda de Zelda — A Saga de Hyrule</title>
+  <link rel="icon" type="image/png" href="img/imghenrique/favicon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/henrique.css" />
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#topo" class="brand">
+        <svg viewBox="0 0 100 88" class="triforce" aria-hidden="true">
+          <path d="M50 0 L75 44 H25 Z" />
+          <path d="M25 44 L50 88 H0 Z" />
+          <path d="M75 44 L100 88 H50 Z" />
+        </svg>
+        <span class="brand-name">HYRULE</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#sobre">A Saga</a></li>
+          <li><a href="#personagens">Personagens</a></li>
+          <li><a href="#jogos">Jogos</a></li>
+          <li><a href="#curiosidades">Curiosidades</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              Mundos <span class="caret">▾</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="pag1.html">The Last of Us</a></li>
+              <li><a href="pag3.html">Kingdom Come</a></li>
+              <li><a href="pag4.html">Ghost of Tsushima</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="topo">
+    <!-- Hero -->
+    <section class="hero">
+      <img src="img/imghenrique/banner.jpg" alt="" class="hero-bg" />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <svg viewBox="0 0 100 88" class="triforce hero-triforce gold-glow" aria-hidden="true">
+          <path d="M50 0 L75 44 H25 Z" />
+          <path d="M25 44 L50 88 H0 Z" />
+          <path d="M75 44 L100 88 H50 Z" />
+        </svg>
+        <p class="hero-eyebrow">A Lenda de</p>
+        <h1 class="hero-title gold-glow">ZELDA</h1>
+        <p class="hero-text">
+          Coragem, Sabedoria e Poder. Uma jornada eterna pelo reino de Hyrule,
+          onde heróis renascem a cada era para enfrentar as trevas.
+        </p>
+        <div class="hero-actions">
+          <a href="#sobre" class="btn btn-primary">Iniciar Aventura</a>
+          <a href="#jogos" class="btn btn-ghost">Ver Jogos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- A Saga -->
+    <section id="sobre" class="section vignette">
+      <div class="container">
+        <div class="section-title">
+          <div class="ornament">
+            <svg viewBox="0 0 100 88" class="triforce sm" aria-hidden="true">
+              <path d="M50 0 L75 44 H25 Z" />
+              <path d="M25 44 L50 88 H0 Z" />
+              <path d="M75 44 L100 88 H50 Z" />
+            </svg>
+          </div>
+          <p class="eyebrow">A Saga</p>
+          <h2>O que é The Legend of Zelda?</h2>
+        </div>
+
+        <div class="prose">
+          <p>
+            The Legend of Zelda é uma das franquias mais icônicas da história
+            dos videogames, criada por Shigeru Miyamoto e Takashi Tezuka para
+            a Nintendo em 1986. A série mistura ação, aventura, exploração e
+            resolução de quebra-cabeças em vastos mundos de fantasia.
+          </p>
+          <p>
+            A maioria dos jogos gira em torno de Link, um jovem herói que
+            precisa salvar a Princesa Zelda e o reino de Hyrule das garras de
+            Ganon. No centro de tudo está a Triforce, uma relíquia sagrada
+            dividida em três partes: Coragem, Sabedoria e Poder.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card card-center">
+            <h3 class="pilar-title">Coragem</h3>
+            <p class="pilar-owner">Link</p>
+            <p class="muted">
+              O herói escolhido, sempre vestido de verde. Silencioso e
+              determinado, ele empunha a Master Sword para proteger Hyrule.
+            </p>
+          </div>
+          <div class="card card-center">
+            <h3 class="pilar-title">Sabedoria</h3>
+            <p class="pilar-owner">Princesa Zelda</p>
+            <p class="muted">
+              A princesa portadora da linhagem real. Guardiã de segredos
+              ancestrais e frequentemente a chave para selar o mal.
+            </p>
+          </div>
+          <div class="card card-center">
+            <h3 class="pilar-title">Poder</h3>
+            <p class="pilar-owner">Ganon</p>
+            <p class="muted">
+              O antagonista movido pela ambição. Busca a Triforce completa
+              para dominar o reino e mergulhá-lo nas trevas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personagens -->
+    <section id="personagens" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div class="ornament">
+            <svg viewBox="0 0 100 88" class="triforce sm" aria-hidden="true">
+              <path d="M50 0 L75 44 H25 Z" />
+              <path d="M25 44 L50 88 H0 Z" />
+              <path d="M75 44 L100 88 H50 Z" />
+            </svg>
+          </div>
+          <p class="eyebrow">Lendas de Hyrule</p>
+          <h2>Os Principais Personagens</h2>
+        </div>
+
+        <div class="grid grid-3">
+
+          <article class="card character-card">
+            <div class="character-image">
+              <img src="img/imghenrique/LINK.jpg" alt="Link">
+            </div>
+            <h3 class="card-name">Link</h3>
+            <p class="card-role">O Herói da Coragem</p>
+            <p class="muted">
+              Protagonista da série. Um jovem corajoso que renasce a cada era
+              para defender Hyrule. Apesar de ser o herói, quase nunca fala.
+            </p>
+          </article>
+
+          <article class="card character-card">
+            <div class="character-image">
+              <img src="img/imghenrique/zelda.jpg" alt="Princesa Zelda">
+            </div>
+            <h3 class="card-name">Princesa Zelda</h3>
+            <p class="card-role">A Portadora da Sabedoria</p>
+            <p class="muted">
+              Membro da família real de Hyrule. Possui poderes mágicos e um
+              vínculo com a deusa Hylia. Muitas vezes é mais protagonista do
+              que aparenta.
+            </p>
+          </article>
+
+          <article class="card character-card">
+            <div class="character-image">
+              <img src="img/imghenrique/ganon.jpg" alt="Ganondorf">
+            </div>
+            <h3 class="card-name">Ganondorf / Ganon</h3>
+            <p class="card-role">O Rei do Mal</p>
+            <p class="muted">
+              O vilão recorrente. Em forma humana é Ganondorf, o rei dos
+              Gerudo; em forma de fera demoníaca, torna-se Ganon, movido pelo
+              desejo de poder.
+            </p>
+          </article>
+
+          <article class="card character-card">
+            <div class="character-image">
+              <img src="img/imghenrique/impa.jpg" alt="Impa">
+            </div>
+            <h3 class="card-name">Impa</h3>
+            <p class="card-role">A Guardiã Sheikah</p>
+            <p class="muted">
+              Protetora leal da linhagem real. Sábia guerreira do clã Sheikah,
+              guia Link e Zelda em momentos cruciais da jornada.
+            </p>
+          </article>
+
+          <article class="card character-card">
+            <div class="character-image">
+              <img src="img/imghenrique/epona.jpg" alt="Midna">
+            </div>
+            <h3 class="card-name">Epona</h3>
+            <p class="card-role">A Égua de Link</p>
+            <p class="muted">
+              A fiel égua de Link, conhecida por acompanhá-lo em diversas aventuras.
+              Epona ajuda o herói a atravessar grandes distâncias e se tornou um dos
+              personagens mais marcantes da franquia.
+            </p>
+          </article>
+
+          <article class="card character-card">
+            <div class="character-image">
+              <img src="img/imghenrique/navi.jpg" alt="Navi">
+            </div>
+            <h3 class="card-name">Navi</h3>
+            <p class="card-role">A Fada Guia</p>
+            <p class="muted">
+              A famosa fada de Ocarina of Time que acompanha Link. Seu
+              "Hey! Listen!" ficou eternizado entre os fãs da franquia.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Jogos -->
+    <section id="jogos" class="section vignette">
+      <div class="container container-narrow">
+        <div class="section-title">
+          <div class="ornament">
+            <svg viewBox="0 0 100 88" class="triforce sm" aria-hidden="true">
+              <path d="M50 0 L75 44 H25 Z" />
+              <path d="M25 44 L50 88 H0 Z" />
+              <path d="M75 44 L100 88 H50 Z" />
+            </svg>
+          </div>
+          <p class="eyebrow">A Linha do Tempo</p>
+          <h2>Os Jogos da Saga</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <span class="dot" aria-hidden="true"></span>
+            <article class="card">
+              <div class="game-head">
+                <h3 class="card-name">The Legend of Zelda</h3>
+                <span class="game-year">1986</span>
+              </div>
+              <p class="game-console">NES</p>
+              <p class="game-summary">
+                O jogo original que iniciou tudo. Link explora o vasto mundo de
+                Hyrule reunindo os fragmentos da Triforce da Sabedoria para
+                derrotar Ganon.
+              </p>
+              <p class="game-trivia">
+                <span class="trivia-label">Você sabia? </span>Foi um dos
+                primeiros jogos de console a permitir salvar o progresso,
+                graças a uma bateria interna no cartucho.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <span class="dot" aria-hidden="true"></span>
+            <article class="card">
+              <div class="game-head">
+                <h3 class="card-name">A Link to the Past</h3>
+                <span class="game-year">1991</span>
+              </div>
+              <p class="game-console">SNES</p>
+              <p class="game-summary">
+                Link viaja entre o Mundo da Luz e o Mundo das Trevas para
+                resgatar as donzelas e enfrentar o feiticeiro Agahnim.
+              </p>
+              <p class="game-trivia">
+                <span class="trivia-label">Você sabia? </span>Introduziu a
+                Master Sword, a espada lendária que se tornaria marca
+                registrada da série.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <span class="dot" aria-hidden="true"></span>
+            <article class="card">
+              <div class="game-head">
+                <h3 class="card-name">Ocarina of Time</h3>
+                <span class="game-year">1998</span>
+              </div>
+              <p class="game-console">Nintendo 64</p>
+              <p class="game-summary">
+                A primeira aventura em 3D. Link viaja no tempo entre a infância
+                e a fase adulta para impedir Ganondorf de dominar Hyrule.
+              </p>
+              <p class="game-trivia">
+                <span class="trivia-label">Você sabia? </span>É frequentemente
+                citado como um dos melhores jogos já feitos, e popularizou o
+                sistema de mira automática "Z-targeting".
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <span class="dot" aria-hidden="true"></span>
+            <article class="card">
+              <div class="game-head">
+                <h3 class="card-name">Majora's Mask</h3>
+                <span class="game-year">2000</span>
+              </div>
+              <p class="game-console">Nintendo 64</p>
+              <p class="game-summary">
+                Link tem apenas três dias para impedir que a lua caia sobre a
+                cidade de Termina, revivendo o mesmo ciclo de tempo
+                repetidamente.
+              </p>
+              <p class="game-trivia">
+                <span class="trivia-label">Você sabia? </span>É o jogo mais
+                sombrio da série e foi desenvolvido em apenas um ano,
+                reaproveitando a engine de Ocarina of Time.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <span class="dot" aria-hidden="true"></span>
+            <article class="card">
+              <div class="game-head">
+                <h3 class="card-name">The Wind Waker</h3>
+                <span class="game-year">2002</span>
+              </div>
+              <p class="game-console">GameCube</p>
+              <p class="game-summary">
+                Com visual em cel-shading, Link navega por um vasto oceano em
+                busca de sua irmã sequestrada, explorando ilhas espalhadas.
+              </p>
+              <p class="game-trivia">
+                <span class="trivia-label">Você sabia? </span>Seu estilo de
+                arte em desenho foi polêmico no lançamento, mas hoje é aclamado
+                por não ter envelhecido visualmente.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <span class="dot" aria-hidden="true"></span>
+            <article class="card">
+              <div class="game-head">
+                <h3 class="card-name">Twilight Princess</h3>
+                <span class="game-year">2006</span>
+              </div>
+              <p class="game-console">GameCube / Wii</p>
+              <p class="game-summary">
+                Um Hyrule mais realista e sombrio. Link pode se transformar em
+                lobo e conta com a ajuda da misteriosa Midna.
+              </p>
+              <p class="game-trivia">
+                <span class="trivia-label">Você sabia? </span>Lançado em duas
+                versões espelhadas: no Wii, o mapa foi invertido para que Link
+                ficasse destro nos controles de movimento.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <span class="dot" aria-hidden="true"></span>
+            <article class="card">
+              <div class="game-head">
+                <h3 class="card-name">Skyward Sword</h3>
+                <span class="game-year">2011</span>
+              </div>
+              <p class="game-console">Wii</p>
+              <p class="game-summary">
+                A origem cronológica da lenda. Link vive na cidade flutuante de
+                Skyloft e desce à superfície para salvar Zelda.
+              </p>
+              <p class="game-trivia">
+                <span class="trivia-label">Você sabia? </span>Conta a história
+                da criação da Master Sword e da origem do ciclo eterno entre
+                Link, Zelda e Ganon.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <span class="dot" aria-hidden="true"></span>
+            <article class="card">
+              <div class="game-head">
+                <h3 class="card-name">Breath of the Wild</h3>
+                <span class="game-year">2017</span>
+              </div>
+              <p class="game-console">Switch / Wii U</p>
+              <p class="game-summary">
+                Uma revolução em mundo aberto. Link acorda após 100 anos e
+                explora um Hyrule livre, com total liberdade de exploração e
+                física realista.
+              </p>
+              <p class="game-trivia">
+                <span class="trivia-label">Você sabia? </span>Você pode ir
+                direto derrotar Ganon logo após o tutorial, sem completar
+                nenhuma outra parte do jogo.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <span class="dot" aria-hidden="true"></span>
+            <article class="card">
+              <div class="game-head">
+                <h3 class="card-name">Tears of the Kingdom</h3>
+                <span class="game-year">2023</span>
+              </div>
+              <p class="game-console">Switch</p>
+              <p class="game-summary">
+                Sequência direta de Breath of the Wild. Link explora ilhas
+                celestes e cavernas subterrâneas com novos poderes de
+                construção e fusão.
+              </p>
+              <p class="game-trivia">
+                <span class="trivia-label">Você sabia? </span>O sistema
+                "Ultrahand" permite montar veículos e máquinas, gerando
+                criações absurdas e virais entre os jogadores.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <span class="dot" aria-hidden="true"></span>
+            <article class="card">
+              <div class="game-head">
+                <h3 class="card-name">Echoes of Wisdom</h3>
+                <span class="game-year">2024</span>
+              </div>
+              <p class="game-console">Switch</p>
+              <p class="game-summary">
+                Pela primeira vez, a própria Princesa Zelda é a protagonista
+                jogável, usando ecos mágicos para copiar objetos e inimigos.
+              </p>
+              <p class="game-trivia">
+                <span class="trivia-label">Você sabia? </span>É o primeiro jogo
+                principal da série em que Zelda, e não Link, é o personagem
+                controlado do início ao fim.
+              </p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Curiosidades -->
+    <section id="curiosidades" class="section">
+      <div class="container">
+        <div class="section-title">
+          <div class="ornament">
+            <svg viewBox="0 0 100 88" class="triforce sm" aria-hidden="true">
+              <path d="M50 0 L75 44 H25 Z" />
+              <path d="M25 44 L50 88 H0 Z" />
+              <path d="M75 44 L100 88 H50 Z" />
+            </svg>
+          </div>
+          <p class="eyebrow">Segredos de Hyrule</p>
+          <h2>Curiosidades da Franquia</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3 class="card-name">O nome "Zelda"</h3>
+            <p class="muted">
+              A princesa foi batizada em homenagem a Zelda Fitzgerald, esposa
+              do escritor F. Scott Fitzgerald. Miyamoto achou o nome "agradável
+              e significativo".
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-name">Link é canhoto (quase sempre)</h3>
+            <p class="muted">
+              Tradicionalmente Link empunha a espada com a mão esquerda. Isso
+              só mudou na versão de Wii de Twilight Princess por causa dos
+              controles de movimento.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-name">Uma linha do tempo dividida</h3>
+            <p class="muted">
+              A cronologia oficial da série se divide em três ramos após
+              Ocarina of Time, dependendo se Link vence, perde ou volta no
+              tempo.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-name">Link nunca fala</h3>
+            <p class="muted">
+              O silêncio do herói é proposital: serve para que o jogador se
+              coloque no lugar dele. "Link" significa "elo", ligando o jogador
+              ao mundo.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-name">A música da série</h3>
+            <p class="muted">
+              A trilha sonora composta por Koji Kondo é lendária. O tema
+              principal foi criado em apenas um dia, quando um plano original de
+              usar uma música clássica não deu certo.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-name">Um fenômeno mundial</h3>
+            <p class="muted">
+              A franquia já vendeu mais de 150 milhões de cópias e influenciou
+              incontáveis outros jogos de aventura ao longo de quase quatro
+              décadas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <svg viewBox="0 0 100 88" class="triforce sm" aria-hidden="true">
+        <path d="M50 0 L75 44 H25 Z" />
+        <path d="M25 44 L50 88 H0 Z" />
+        <path d="M75 44 L100 88 H50 Z" />
+      </svg>
+      <p class="footer-text">
+        Página de fã sobre The Legend of Zelda. Todos os direitos da franquia
+        pertencem à Nintendo.
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

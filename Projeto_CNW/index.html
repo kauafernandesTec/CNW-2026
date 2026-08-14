@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto CNW — Computação em Nuvem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Oswald:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/inicio.css">
+
+</head>
+
+<body>
+
+    <header class="menu">
+        <div class="brand">Quatro Jogos <span>/</span> Uma Página</div>
+        <nav>
+            <ul class="worlds-nav">
+                <li><a href="index.html" class="is-active">Início</a></li>
+                <li><a href="pag1.html">The Last of Us</a></li>
+                <li><a href="pag2.html">Zelda</a></li>
+                <li><a href="pag3.html">Kingdom Come</a></li>
+                <li><a href="pag4.html">Ghost of Tsushima</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bands" aria-hidden="true">
+            <div class="band tlou"></div>
+            <div class="band zelda"></div>
+            <div class="band kingdom"></div>
+            <div class="band ghost"></div>
+        </div>
+        <div class="hero-vignette" aria-hidden="true"></div>
+        <svg class="grain" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <filter id="noise">
+                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+            </filter>
+            <rect width="100%" height="100%" filter="url(#noise)" />
+        </svg>
+
+        <div class="hero-content">
+            <p class="eyebrow">Computação em Nuvem &middot; Criação de sites no GitHub</p>
+            <h1>Cinco Jogos,<br>Uma Nuvem
+            </h1>
+            <p class="lede">Um projeto de computação em nuvem, contado através de cinco páginas de jogos
+                que marcam a equipe</p>
+            <div class="world-tags">
+                <span class="world-tag tlou">The Last of Us</span>
+                <span class="world-tag zelda">Zelda</span>
+                <span class="world-tag kingdom">Kingdom Come</span>
+                <span class="world-tag ghost">Ghost of Tsushima</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel" id="atividade">
+        <div class="panel-head">
+            <h2>Sobre a Atividade</h2>
+            <span class="eyebrow">Missão do grupo</span>
+        </div>
+        <div class="briefing-text">
+            <p>Este site foi desenvolvido como atividade da disciplina de <strong>Computação em Nuvem</strong>, com
+                o objetivo de aplicar na prática os conceitos de criação e hospedagem de sites em ambiente de nuvem,
+                utilizando o <strong>GitHub</strong> como plataforma de publicação.</p>
+            <p>Para dar identidade ao projeto, o grupo escolheu contar essa jornada através de quatro universos de
+                jogos que inspiram a equipe — <strong>The Last of Us</strong>, <strong>Zelda</strong>,
+                <strong>Kingdom Come: Deliverance</strong> e <strong>Ghost of Tsushima</strong> — cada um representando
+                uma das páginas do site, com sua própria atmosfera e paleta visual.
+            </p>
+            <p>O site é composto por <strong>cinco páginas</strong>: esta página inicial, com a apresentação da
+                equipe e da atividade, e uma página dedicada a cada um dos quatro mundos escolhidos.</p>
+        </div>
+        <div class="stat-log">
+            <div class="stat-row"><span class="k">Disciplina</span><span class="v">Computação em Nuvem - CNW</span>
+            </div>
+            <div class="stat-row"><span class="k">Tema</span><span class="v">Criação de sites em nuvem</span></div>
+            <div class="stat-row"><span class="k">Hospedagem</span><span class="v">GitHub</span></div>
+            <div class="stat-row"><span class="k">Páginas</span><span class="v">5</span></div>
+            <div class="stat-row"><span class="k">Integrantes</span><span class="v">5</span></div>
+        </div>
+    </section>
+
+    <section class="panel" id="equipe">
+        <div class="panel-head">
+            <h2>A Equipe</h2>
+            <span class="eyebrow">Seleção de jogadores</span>
+        </div>
+        <div class="team-grid">
+            <div class="slot w-tlou">
+                <span class="slot-id">JOGADOR 01</span>
+                <h3>Pietro Andrade</h3>
+                <span class="world-tag ">Lider</span>
+            </div>
+            <div class="slot w-tlou">
+                <span class="slot-id">JOGADOR 02</span>
+                <h3>Artur Miguel</h3>
+                <span class="world-tag tlou">The Last of Us</span>
+            </div>
+            <div class="slot w-zelda">
+                <span class="slot-id">JOGADOR 03</span>
+                <h3>Henrique Araújo</h3>
+                <span class="world-tag zelda">Zelda</span>
+            </div>
+            <div class="slot w-kingdom">
+                <span class="slot-id">JOGADOR 04</span>
+                <h3>Kauâ Fernandes</h3>
+                <span class="world-tag kingdom">Kingdom Come</span>
+            </div>
+            <div class="slot w-ghost">
+                <span class="slot-id">JOGADOR 05</span>
+                <h3>Pietro Rodrigues</h3>
+                <span class="world-tag ghost">Ghost of Tsushima</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>Computação em Nuvem &middot; Trabalho em grupo</span>
+        <span>Hospedado via GitHub Pages</span>
+    </footer>
+
+</body>
+
+</html>

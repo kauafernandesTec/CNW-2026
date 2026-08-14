@@ -1,0 +1,643 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Paleta de Hyrule — mesma do projeto original:
+  - Verde-escuro noturno (fundo)
+  - Pergaminho quente (texto)
+  - Dourado da Triforce (primária/destaque)
+  - Verde floresta (secundária)
+*/
+:root {
+  --background: oklch(0.19 0.025 155);
+  --foreground: oklch(0.93 0.03 85);
+  --card: oklch(0.24 0.03 155);
+  --primary: oklch(0.8 0.14 84);
+  --primary-foreground: oklch(0.2 0.03 155);
+  --secondary-foreground: oklch(0.95 0.02 85);
+  --muted-foreground: oklch(0.72 0.03 90);
+  --border: oklch(0.4 0.05 150 / 40%);
+  --radius: 0.5rem;
+
+  --font-serif: 'Cinzel', 'Times New Roman', serif;
+  --font-sans: 'EB Garamond', Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background: var(--background);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.container-narrow {
+  max-width: 64rem;
+}
+
+.section {
+  padding: 7rem 0;
+}
+
+/* Triforce */
+.triforce {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--primary);
+}
+.triforce.sm {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.gold-glow {
+  filter: drop-shadow(0 0 24px oklch(0.8 0.14 84 / 45%));
+}
+.hero-title.gold-glow {
+  text-shadow: 0 0 24px oklch(0.8 0.14 84 / 45%);
+  filter: none;
+}
+
+.vignette {
+  background:
+    radial-gradient(ellipse at top, oklch(0.24 0.03 155 / 60%), transparent 70%),
+    var(--background);
+}
+
+/* Cabeçalho */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--border);
+  background: oklch(0.19 0.025 155 / 80%);
+  backdrop-filter: blur(12px);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--primary);
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  font-size: 0.9rem;
+}
+.nav-list a {
+  color: var(--muted-foreground);
+  transition: color 0.2s ease;
+}
+.nav-list a:hover {
+  color: var(--primary);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 92vh;
+  overflow: hidden;
+  text-align: center;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    oklch(0.19 0.025 155 / 50%),
+    oklch(0.19 0.025 155 / 40%),
+    var(--background)
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 48rem;
+  padding: 0 1.5rem;
+}
+.hero-triforce {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 2rem;
+}
+.hero-eyebrow {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.hero-title {
+  font-family: var(--font-serif);
+  font-weight: 900;
+  font-size: clamp(3.5rem, 12vw, 8rem);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: var(--foreground);
+}
+.hero-text {
+  max-width: 36rem;
+  margin: 1.5rem auto 0;
+  font-size: 1.125rem;
+  color: oklch(0.93 0.03 85 / 90%);
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+.btn-ghost {
+  border: 1px solid oklch(0.8 0.14 84 / 50%);
+  color: var(--primary);
+}
+.btn-ghost:hover {
+  background: oklch(0.8 0.14 84 / 10%);
+}
+
+/* Títulos de seção */
+.section-title {
+  max-width: 42rem;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.ornament::before,
+.ornament::after {
+  content: '';
+  display: block;
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to right, transparent, var(--primary), transparent);
+}
+.eyebrow {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+.section-title h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--foreground);
+}
+
+/* Texto corrido */
+.prose {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.125rem;
+}
+.prose p + p {
+  margin-top: 1.5rem;
+}
+
+/* Grade e cards */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: oklch(0.8 0.14 84 / 60%);
+  box-shadow: 0 12px 40px oklch(0 0 0 / 40%);
+}
+.card-center {
+  text-align: center;
+  padding: 2rem;
+}
+.card-name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+.card-role {
+  margin-top: 0.25rem;
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--primary);
+}
+.pilar-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.pilar-owner {
+  margin-top: 0.25rem;
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: oklch(0.95 0.02 85 / 70%);
+}
+.muted {
+  margin-top: 1rem;
+  color: var(--muted-foreground);
+}
+
+/* Linha do tempo dos jogos */
+.timeline {
+  list-style: none;
+  position: relative;
+  margin-top: 4rem;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .timeline {
+    padding-left: 2.5rem;
+  }
+}
+.timeline-item {
+  position: relative;
+}
+.dot {
+  position: absolute;
+  left: -31px;
+  top: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 4px var(--background);
+}
+@media (min-width: 768px) {
+  .dot {
+    left: -47px;
+  }
+}
+.game-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.game-year {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--primary);
+}
+.game-console {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted-foreground);
+}
+.game-summary {
+  margin-top: 1rem;
+  color: oklch(0.93 0.03 85 / 85%);
+}
+.game-trivia {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+}
+.trivia-label {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--secondary-foreground);
+}
+
+/* Rodapé */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+.footer-text {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dropdown-toggle .caret {
+  font-size: 0.65rem;
+  color: var(--primary);
+  transition: transform 0.25s ease;
+}
+
+.dropdown:hover .dropdown-toggle .caret,
+.dropdown:focus-within .dropdown-toggle .caret {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 1rem);
+  right: 0;
+  min-width: 12rem;
+  list-style: none;
+  padding: 0.5rem 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 45px oklch(0 0 0 / 45%);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+  z-index: 60;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li + li {
+  border-top: 1px solid var(--border);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.65rem 1.25rem;
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--muted-foreground);
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible {
+  color: var(--primary);
+  background: oklch(0.8 0.14 84 / 10%);
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .dropdown-menu {
+    min-width: 10rem;
+    right: -0.5rem;
+  }
+
+  .dropdown-menu a {
+    font-size: 0.75rem;
+    padding: 0.55rem 1rem;
+  }
+}
+/* =========================================================
+   MENU SANDUÍCHE (MOBILE)
+========================================================= */
+
+.nav-toggle-input {
+  display: none;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  z-index: 70;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Transforma em "X" quando aberto */
+.nav-toggle-input:checked ~ .nav-toggle span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle-input:checked ~ .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle-input:checked ~ .nav-toggle span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .header-inner nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease;
+  }
+
+  .nav-toggle-input:checked ~ nav .nav-list {
+    max-height: 28rem;
+    opacity: 1;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-list li {
+    width: 100%;
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 0.85rem 0.25rem;
+    font-family: var(--font-serif);
+    letter-spacing: 0.08em;
+  }
+
+  .nav-list li:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Dropdown vira submenu fixo empilhado, sem depender de hover */
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background: oklch(0.17 0.02 155);
+    padding: 0;
+    display: none;
+  }
+
+  .nav-toggle-input:checked ~ nav .dropdown:focus-within .dropdown-menu,
+  .dropdown-toggle:focus ~ .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-toggle .caret {
+    margin-left: auto;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    width: 100%;
+  }
+
+  .dropdown-menu a {
+    padding-left: 1.5rem;
+  }
+}
